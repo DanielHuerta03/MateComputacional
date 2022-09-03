@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PROYECTO MATEMÁTICA COMPUTACIONAL</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script>
+    <style type="text/css">
+        #dibujo {
+          width: 600px;
+    height: 600px;
+    border: 1px solid lightgray;
+        }
+      </style>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">   
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white position-relative">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand text-secondary">
+                <h1 class="display-4 text-uppercase">MATEMATICA COMPUTACIONAL</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ml-auto py-0 pr-3 border-right">
+                    <a href="" class="nav-item nav-link active smoothScroll">Inicio</a>
+                    <a href="#acerca" class="nav-item nav-link smoothScroll">Acerca del Proyecto</a>
+                    <a href="" class="nav-item nav-link smoothScroll">Comenzar</a>
+                    <a href="#team" class="nav-item nav-link smoothScroll" >Team</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 px-0" style="margin-bottom: 90px;" >
+        <div class="row mx-0 align-items-center">
+            <div class="col-lg-6 px-md-5 text-center text-lg-left">
+                <h1 class="display-2 text-uppercase mb-3">Problema del flujo máximo</h1>
+                <p class="text-dark mb-4">Dado 𝑛 ∈ [5, 15] ingresado por el usuario, el programa debe generar
+                    aleatoriamente una matriz 𝑛 × 𝑛 (con elementos positivos) o solicitar el
+                    ingreso de cada elemento de la matriz (según decisión del usuario).
+                    Además, debe mostrar la red de flujos óptima asociada a esta matriz y
+                    calcular el flujo máximo que existe entre dos vértices seleccionados por el
+                    usuario.</p>
+                <a href="" class="btn btn-dark text-uppercase mt-1 py-3 px-5">Comenzar</a>
+            </div>
+            <div class="col-lg-6 px-0 text-right">
+                <img class="img-fluid mt-5 mt-lg-0" src="img/header.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="acerca">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img class="img-fluid mb-4 mb-lg-0" src="img/about.jpg" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-4 text-uppercase mb-4">¿Qué es un problema de flujo máximo?</h1>
+                    <h5 class="text-uppercase text-primary mb-3">Clita elitr et amet et ipsum sea. Ipsum stet kasd ea et no est duo diam. Lorem dolores eos ut nonumy ipsum sit clita lorem no amet dolor dolore, stet sit dolor justo</h5>
+                    <p class="mb-4">Eirmod est dolor nonumy sea amet dolore erat sit dolor et dolor vero. Tempor ipsum at justo amet at ipsum justo. Aiam kasd sea sit dolor duo elitr dolor amet, justo est ipsum amet dolor ut ipsum. Labore diam et nonumy amet dolores. Volup sit labore dolores erat, magna justo sed lorem kasd ea dolor. Labore sit clita invidunt, est dolores lorem sed ipsum kasd no amet ipsum.</p>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=qnpJmwLURYI&t=208s" class="btn btn-primary text-uppercase py-3 px-5">Leer más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+
+    <div class="container-fluid py-5" id="team">
+        <div class="container py-5">
+            <h1 class="display-4 text-uppercase text-center mb-5">TRABAJO</h1>
+            <form>
+                <select name="select" id="tabla"/>
+                    <option value="5"selected>5</option>
+                    <option value="6" >6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                  </select>
+                <button type="button" onclick="creartabla()">Crear</button>
+            </form>
+            <section id="Holi">
+            </section>
+            <form>
+                <button type="button" onclick="">Aletorio</button>
+                <button type="button" onclick="captura()">Calcular</button>
+                <button type="button" onclick="grafo()">Grafo</button>
+            </form>
+            <div id="dibujo"></div>
+        </div>
+    </div>
+
+   
+
+
+   
+    
+
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5" id="team">
+        <div class="container py-5">
+            <h1 class="display-4 text-uppercase text-center mb-5">CONÓCENOS</h1>
+            <div class="owl-carousel team-carousel position-relative" style="padding-left: 30px;">
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid w-100" src="img/team-1.jpeg" alt="">
+                        <div class="team-overlay">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h4 class="text-uppercase">Daniel Huerta</h4>
+                        <p class="m-0">PROGRAMADOR</p>
+                    </div>
+                </div>
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid w-100" src="img/team-2.jpeg" alt="">
+                        <div class="team-overlay">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h4 class="text-uppercase">Carlos Perez</h4>
+                        <p class="m-0">PROGRAMADOR</p>
+                    </div>
+                </div>
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid w-100" src="img/team-3.jpeg" alt="">
+                        <div class="team-overlay">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h4 class="text-uppercase">Angie Natshumi</h4>
+                        <p class="m-0">PROGRAMADOR</p>
+                    </div>
+                </div>
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                        <div class="team-overlay">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h4 class="text-uppercase">Sandro Gonzales</h4>
+                        <p class="m-0">PROGRAMADOR</p>
+                    </div>
+                </div>
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid w-100" src="img/team-5.jpg" alt="">
+                        <div class="team-overlay">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h4 class="text-uppercase">Ariadna</h4>
+                        <p class="m-0">PROGRAMADOR</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                
+                <h6 class="text-uppercase text-white py-2">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-white mb-4">Sobre Nosotros</h4>
+                <p>Somos un grupo de programadores con ganas de aprender</p>
+                <p><i class="fa fa-map-marker-alt text-white mr-2"></i>Lima, Lima, PERU</p>
+                <p><i class="fa fa-phone-alt text-white mr-2"></i>+51 999 999 999</p>
+                <p><i class="fa fa-envelope text-white mr-2"></i>u202115070@upc.edu.pe</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-white mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Home</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>About Us</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Our Services</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Pricing Plan</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Meet The Team</a>
+                    <a class="text-white-50" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-white mb-4">Newsletter</h4>
+                <p class="mb-4">Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
+                <div class="w-100 mb-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary text-uppercase px-3">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+                <i>Lorem sit sed elitr sed kasd et</i>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="mb-2 text-center text-white-50">&copy; <a href="#">Your Site Name</a>. All Rights Reserved.</p>
+        <p class="m-0 text-center text-white-50">Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+    <script type="text/javascript" src="js/xd.js"></script>
+   
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
