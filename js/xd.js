@@ -214,7 +214,7 @@ function grafo() {
         }
 
     }
-    alert(edges);
+
     // create an array with edges
 
     // create a network
