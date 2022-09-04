@@ -234,11 +234,11 @@ var nodes = [
         if(document.getElementById(numerar).value>0){
             if(j==0) {
                 edges.pop();
-                edges = [{ from: (u+1), to: (v+1), label: (document.getElementById(numerar).value), font: { background: "white" } },];
+                edges = [{ from: (u+1), to: (v+1), arrows: "to", label: (document.getElementById(numerar).value), font: { background: "white" } },];
                 j++;
 
             }else{
-                edges.push({ from: (u+1), to: (v+1), label: (document.getElementById(numerar).value), font: { background: "white" } });
+                edges.push({ from: (u+1), to: (v+1), arrows: "to", label: (document.getElementById(numerar).value), font: { background: "white" } });
             }
       }
       i++;    
@@ -261,4 +261,22 @@ var nodes = [
   };
   var network = new vis.Network(container, data, options);
 
+ }
+
+function Aleatorio(){
+    let V = document.getElementById("tabla").value;
+    let numerar=0;
+  for( u = 0; u < V; u++)
+  {
+    
+    for(v = 0 ; v < V; v++){
+        if(u==v || u == V-1){
+            document.getElementById(numerar).value=0;
+        }else{
+            document.getElementById(numerar).value=Math.floor((Math.random() * (20 - 0 + 1)) + 0);
+        }
+       
+       numerar++;
+    }
+ }
  }
