@@ -218,6 +218,7 @@ th {
   text-align: -webkit-match-parent;
 }
 
+
 label {
   display: inline-block;
   margin-bottom: 0.5rem;
@@ -2057,6 +2058,9 @@ textarea.form-control {
   margin-right: 0.75rem;
 }
 
+.tablita{
+  width: 100px;
+}
 .form-check-inline .form-check-input {
   position: static;
   margin-top: 0;
