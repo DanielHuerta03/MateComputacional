@@ -13,12 +13,13 @@
     ></script>
     <style type="text/css">
         #dibujo {
-          width: 600px;
+          width: 900px;
     height: 600px;
     border: 1px solid lightgray;
+    background-color: #222222;
         }
       </style>
-
+    
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -35,6 +36,8 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -51,7 +54,7 @@
                 <div class="navbar-nav ml-auto py-0 pr-3 border-right">
                     <a href="" class="nav-item nav-link active smoothScroll">Inicio</a>
                     <a href="#acerca" class="nav-item nav-link smoothScroll">Acerca del Proyecto</a>
-                    <a href="" class="nav-item nav-link smoothScroll">Comenzar</a>
+                    <a href="#TRABAJO" class="nav-item nav-link smoothScroll">Comenzar</a>
                     <a href="#team" class="nav-item nav-link smoothScroll" >Team</a>
                 </div>
             </div>
@@ -71,7 +74,7 @@
                     Además, debe mostrar la red de flujos óptima asociada a esta matriz y
                     calcular el flujo máximo que existe entre dos vértices seleccionados por el
                     usuario.</p>
-                <a href="" class="btn btn-dark text-uppercase mt-1 py-3 px-5">Comenzar</a>
+                <a href="#TRABAJO" class="btn btn-dark text-uppercase mt-1 py-3 px-5  ">Comenzar</a>
             </div>
             <div class="col-lg-6 px-0 text-right">
                 <img class="img-fluid mt-5 mt-lg-0" src="img/header.png" alt="">
@@ -101,11 +104,11 @@
 
 
 
-    <div class="container-fluid py-5" id="team">
+    <div class="container-fluid py-5" id="TRABAJO">
         <div class="container py-5">
             <h1 class="display-4 text-uppercase text-center mb-5">TRABAJO</h1>
             <form>
-                <select name="select" id="tabla"/>
+                <select name="select" class="btn btn-primary text-uppercase py-3 px-5" id="tabla"/>
                     <option value="5"selected>5</option>
                     <option value="6" >6</option>
                     <option value="7">7</option>
@@ -118,16 +121,20 @@
                     <option value="14">14</option>
                     <option value="15">15</option>
                   </select>
-                <button type="button" onclick="creartabla()">Crear</button>
+                <button type="button" class="btn btn-dark text-uppercase mt-1 py-3 px-5" onclick="creartabla()">Crear</button>
+                
             </form>
             <section id="Holi">
+                <br>
             </section>
             <form>
-                <button type="button" onclick="Aleatorio()">Aletorio</button>
-                <button type="button" onclick="captura()">Calcular</button>
-                <button type="button" onclick="grafo()">Grafo</button>
+                <br>
+                <button type="button" class="btn btn-dark text-uppercase mt-1 py-3 px-5" onclick="Aleatorio()">Aletorio</button>
+                <button type="button" class="btn btn-dark text-uppercase mt-1 py-3 px-5" onclick="captura()">Calcular</button>
+                <button type="button" class="btn btn-dark text-uppercase mt-1 py-3 px-5" onclick="grafo()">Grafo</button>
             </form>
             <div id="dibujo"></div>
+
         </div>
     </div>
 
@@ -219,7 +226,7 @@
                         </div>
                     </div>
                     <div class="bg-light text-center p-4">
-                        <h4 class="text-uppercase">Ariadna Ledesma</h4>
+                        <h4 class="text-uppercase">Ariadna</h4>
                         <p class="m-0">PROGRAMADOR</p>
                     </div>
                 </div>
