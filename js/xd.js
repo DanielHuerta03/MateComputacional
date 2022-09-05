@@ -25,6 +25,7 @@ function creartabla() {
             cajaTextNombres.setAttribute('type', "text");
             cajaTextNombres.setAttribute('placeholder', "DATOS");
             cajaTextNombres.setAttribute('id', numerar);
+            cajaTextNombres.setAttribute('class', "tablita");
             numerar++;
             formulario.appendChild(cajaTextNombres);
             row_2_data_1.appendChild(formulario);
@@ -48,8 +49,7 @@ function captura() {
     let V = document.getElementById("tabla").value;
 
 
-    function bfs(Grafiquito, s, t, grafiquito2
-    ) {
+    function HayRuta(Grafiquito, s, t, grafiquito2) {
 
 
         let Puntos_Visitados = new Array(V);
@@ -72,13 +72,11 @@ function captura() {
 
 
                     if (v == t) {
-                        grafiquito2
-                        [v] = u;
+                        grafiquito2[v] = u;
                         return true;
                     }
                     Cola.push(v);
-                    grafiquito2
-                    [v] = u;
+                    grafiquito2[v] = u;
                     Puntos_Visitados[v] = true;
                 }
             }
@@ -108,7 +106,7 @@ function captura() {
             = 0;
 
 
-        while (bfs(Grafiquito, s, t, grafiquito2
+        while (HayRuta(Grafiquito, s, t, grafiquito2
         )) {
 
 
@@ -156,9 +154,9 @@ function captura() {
         }
     }
 
-    alert("The maximum possible flow is " +
-        fordFulkerson(graph1, 0, document.getElementById("tabla").value - 1));
-
+    swal("RESULTADO","The maximum possible flow is " +
+        fordFulkerson(graph1, 0, document.getElementById("tabla").value - 1),'success');
+    
 
 }
 
@@ -167,26 +165,27 @@ function grafo() {
 
 
     var nodes = [
-        { id: 1, label: "A" },
-        { id: 2, label: "B" },
-        { id: 3, label: "C" },
-        { id: 4, label: "D" },
-        { id: 5, label: "E" },
-        { id: 6, label: "F" },
-        { id: 7, label: "G" },
-        { id: 8, label: "H" },
-        { id: 9, label: "I" },
-        { id: 10, label: "J" },
-        { id: 11, label: "K" },
-        { id: 12, label: "L" },
-        { id: 13, label: "M" },
-        { id: 14, label: "N" },
-        { id: 15, label: "O" },
+        { id: 1, label: "A" , color: "#E6CF97"},
+        { id: 2, label: "B" ,color: "#E6CF97"},
+        { id: 3, label: "C" ,color: "#E6CF97"},
+        { id: 4, label: "D" ,color:"#E6CF97"},
+        { id: 5, label: "E" ,color:"#E6CF97"},
+        { id: 6, label: "F" ,color:"#E6CF97"},
+        { id: 7, label: "G" ,color:"#E6CF97"},
+        { id: 8, label: "H" ,color:"#E6CF97"},
+        { id: 9, label: "I" ,color:"#E6CF97"},
+        { id: 10, label: "J" ,color:"#E6CF97"},
+        { id: 11, label: "K" ,color:"#E6CF97"},
+        { id: 12, label: "L" ,color:"#E6CF97"},
+        { id: 13, label: "M" ,color:"#E6CF97"},
+        { id: 14, label: "N" ,color:"#E6CF97"},
+        { id: 15, label: "O" ,color:"#E6CF97"},
     ];
     while (nodes.length > document.getElementById("tabla").value) {
         nodes.pop();
     }
-
+    nodes[0].color = "#22C6DD"
+    nodes[nodes.length-1].color = "#22C6DD"
     var edges = [
         { from: 1, to: 2, label: "label1", font: { background: "white" } },
 
@@ -202,11 +201,11 @@ function grafo() {
             if (document.getElementById(numerar).value > 0) {
                 if (j == 0) {
                     edges.pop();
-                    edges = [{ from: (u + 1), to: (v + 1), arrows: "to", label: (document.getElementById(numerar).value), font: { background: "white" } },];
+                    edges = [{ from: (u + 1), to: (v + 1), arrows: "to", label: (document.getElementById(numerar).value), font: { color: "white" } },];
                     j++;
 
                 } else {
-                    edges.push({ from: (u + 1), to: (v + 1), arrows: "to", label: (document.getElementById(numerar).value), font: { background: "white" } });
+                    edges.push({ from: (u + 1), to: (v + 1), arrows: "to", label: (document.getElementById(numerar).value), font: { color: "white" } });
                 }
             }
             i++;
