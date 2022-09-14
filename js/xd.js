@@ -86,15 +86,16 @@ function captura() {
     }
 
 
-    function fordFulkerson(graph, s, t) {
+    function TeoremaFordFergurson(tabla, s, t) {
+        
+        let Grafiquito = new Array(V);
         let u, v;
 
-        let Grafiquito = new Array(V);
 
         for (u = 0; u < V; u++) {
             Grafiquito[u] = new Array(V);
             for (v = 0; v < V; v++)
-                Grafiquito[u][v] = graph[u][v];
+                Grafiquito[u][v] = tabla[u][v];
         }
 
 
@@ -106,8 +107,7 @@ function captura() {
             = 0;
 
 
-        while (HayRuta(Grafiquito, s, t, grafiquito2
-        )) {
+        while (HayRuta(Grafiquito, s, t, grafiquito2)) {
 
 
             let ruta
@@ -144,18 +144,18 @@ function captura() {
             ;
     }
 
-    let graph1 = new Array(V);
+    let tabla1 = new Array(V);
     let numerar = 0;
     for (u = 0; u < V; u++) {
-        graph1[u] = new Array(V);
+        tabla1[u] = new Array(V);
         for (v = 0; v < V; v++) {
-            graph1[u][v] = document.getElementById(numerar).value;
+            tabla1[u][v] = document.getElementById(numerar).value;
             numerar++;
         }
     }
 
-    swal("RESULTADO","The maximum possible flow is " +
-        fordFulkerson(graph1, 0, document.getElementById("tabla").value - 1),'success');
+    swal("RESULTADO","EL FLUJO MAXIMO POSIBLE ES " +
+        TeoremaFordFergurson(tabla1, 0, document.getElementById("tabla").value - 1),'success');
     
 
 }
