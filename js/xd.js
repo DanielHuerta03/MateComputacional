@@ -214,9 +214,6 @@ function grafo() {
 
     }
 
-    // create an array with edges
-
-    // create a network
     var container = document.getElementById("dibujo");
     var data = {
         nodes: nodes,
