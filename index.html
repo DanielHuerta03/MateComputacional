@@ -54,7 +54,7 @@
                 <div class="navbar-nav ml-auto py-0 pr-3 border-right">
                     <a href="" class="nav-item nav-link active smoothScroll">Inicio</a>
                     <a href="#acerca" class="nav-item nav-link smoothScroll">Acerca del Proyecto</a>
-                    <a href="#TRABAJO" class="nav-item nav-link smoothScroll">Comenzar</a>
+                    <a href="#TRABAJO" class="nav-item nav-link smoothScroll ">Comenzar</a>
                     <a href="#team" class="nav-item nav-link smoothScroll" >Team</a>
                 </div>
             </div>
@@ -108,7 +108,7 @@
         <div class="container py-5">
             <h1 class="display-4 text-uppercase text-center mb-5">TRABAJO</h1>
             <form>
-                <select name="select" class="btn btn-primary text-uppercase py-3 px-5" id="tabla"/>
+                <select name="select" class="btn btn-primary text-uppercase py-3 px-5" id="tabla" onchange="grafo()">
                     <option value="5"selected>5</option>
                     <option value="6" >6</option>
                     <option value="7">7</option>
@@ -122,15 +122,20 @@
                     <option value="15">15</option>
                   </select>
                 <button type="button" class="btn btn-dark text-uppercase mt-1 py-3 px-5" onclick="creartabla()">Crear</button>
-                
             </form>
             <section id="Holi">
                 <br>
             </section>
+            <form id="MAX">
+                <br>
+
+            </form>
+            
             <form>
                 <br>
                 <button type="button" class="btn btn-dark text-uppercase mt-1 py-3 px-5" onclick="Aleatorio()">Aletorio</button>
-                <button type="button" class="btn btn-dark text-uppercase mt-1 py-3 px-5" onclick="captura()">Calcular</button>
+                <button type="button" class="btn btn-dark text-uppercase mt-1 py-3 px-5" onclick="captura()">Calcular (TOTAL)</button>
+                <button type="button" class="btn btn-dark text-uppercase mt-1 py-3 px-5" onclick="captura2()">Calcular (RANGO)</button>
                 <button type="button" class="btn btn-dark text-uppercase mt-1 py-3 px-5" onclick="grafo()">Grafo</button>
             </form>
             <div id="dibujo"></div>
