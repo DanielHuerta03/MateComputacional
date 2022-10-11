@@ -201,6 +201,9 @@ function grafo() {
 
     if(document.getElementById("min").value >= document.getElementById("max").value){
         swal("ERROR","El minimo tiene que ser menor que el maximo",'error');
+        document.getElementById("min").value = 1;
+        document.getElementById("max").value = 5;
+        grafo();
     }
     else{
         var nodes = [
