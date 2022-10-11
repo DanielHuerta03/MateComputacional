@@ -199,8 +199,8 @@ function captura() {
 
 function grafo() {
 
-    if(document.getElementById("min").value >= document.getElementById("max").value){
-        swal("ERROR","El minimo tiene que ser menor que el maximo",'error');
+    if(document.getElementById("min").value == document.getElementById("max").value){
+        swal("ERROR","El minimo tiene que ser diferente al maximo",'error');
         document.getElementById("min").value = 1;
         document.getElementById("max").value = 5;
         grafo();
@@ -264,7 +264,9 @@ function grafo() {
             nodes: nodes,
             edges: edges,
         };
+        
         var options = {
+            
             nodes: { font: { strokeWidth: 0 } },
             edges: { font: { strokeWidth: 0 } },
         };
@@ -402,7 +404,7 @@ function captura2() {
             numerar++;
         }
     }
-    if(document.getElementById("min").value >= document.getElementById("max").value){
+    if(document.getElementById("min").value == document.getElementById("max").value){
         swal("ERROR","El minimo tiene que ser menor que el maximo",'error');
     }
     else{
@@ -413,4 +415,3 @@ function captura2() {
     
 
 }
-
